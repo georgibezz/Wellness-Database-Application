@@ -1,0 +1,339 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:7806765401882797447",
+      "lastPropertyId": "2:1121097204077795970",
+      "name": "Categories",
+      "flags": 2,
+      "properties": [
+        {
+          "id": "1:28748554648550329",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1121097204077795970",
+          "name": "name",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:5986005423263010849",
+      "lastPropertyId": "5:1398040144537815062",
+      "name": "Conditions",
+      "flags": 2,
+      "properties": [
+        {
+          "id": "1:391267820563259121",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:814300341116384779",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:1260432410944525588",
+          "name": "description",
+          "type": 9
+        },
+        {
+          "id": "4:1513425294690531650",
+          "name": "causes",
+          "type": 30
+        },
+        {
+          "id": "5:1398040144537815062",
+          "name": "complications",
+          "type": 30
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:8621907411299843905",
+      "lastPropertyId": "2:6960900155722985525",
+      "name": "Interactions",
+      "flags": 2,
+      "properties": [
+        {
+          "id": "1:4028612958952719904",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:6960900155722985525",
+          "name": "description",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:6644129876722853788",
+      "lastPropertyId": "8:3067654329482706073",
+      "name": "Items",
+      "flags": 2,
+      "properties": [
+        {
+          "id": "1:72941138034332000",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1724775811736867913",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:1908984524209361412",
+          "name": "alsoCalled",
+          "type": 9
+        },
+        {
+          "id": "4:2814183948107592584",
+          "name": "uses",
+          "type": 9
+        },
+        {
+          "id": "5:9150252976372292906",
+          "name": "caution",
+          "type": 9
+        },
+        {
+          "id": "6:5767486325703111958",
+          "name": "conscientiousConsumerInformation",
+          "type": 9
+        },
+        {
+          "id": "7:3503385693335441211",
+          "name": "references",
+          "type": 9
+        },
+        {
+          "id": "8:3067654329482706073",
+          "name": "categoryId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "1:4908385215839360328",
+          "relationTarget": "Categories"
+        }
+      ],
+      "relations": [
+        {
+          "id": "1:7347061679394884413",
+          "name": "interaction",
+          "targetId": "3:8621907411299843905"
+        }
+      ]
+    },
+    {
+      "id": "5:2431819095945767469",
+      "lastPropertyId": "9:8158834730784329572",
+      "name": "Plans",
+      "flags": 2,
+      "properties": [
+        {
+          "id": "1:6670189019723500002",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2508037678704692455",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:9019127136511020909",
+          "name": "instructions",
+          "type": 9
+        },
+        {
+          "id": "4:1028816857275346092",
+          "name": "dosage",
+          "type": 9
+        },
+        {
+          "id": "5:244386773097433177",
+          "name": "precautions",
+          "type": 9
+        },
+        {
+          "id": "6:7080190993588741347",
+          "name": "references",
+          "type": 9
+        },
+        {
+          "id": "7:5079962094859706215",
+          "name": "itemId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "2:8490061785408420002",
+          "relationTarget": "Items"
+        },
+        {
+          "id": "8:7790021062484151168",
+          "name": "conditionId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "3:1131986213422414484",
+          "relationTarget": "Conditions"
+        },
+        {
+          "id": "9:8158834730784329572",
+          "name": "symptomId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "4:8562071040032529783",
+          "relationTarget": "Symptoms"
+        }
+      ],
+      "relations": [
+        {
+          "id": "2:7747607459947028685",
+          "name": "user",
+          "targetId": "8:2146476382941573708"
+        }
+      ]
+    },
+    {
+      "id": "6:8673298358073854871",
+      "lastPropertyId": "5:8206311918605620636",
+      "name": "Reviews",
+      "flags": 2,
+      "properties": [
+        {
+          "id": "1:379534733033686050",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4853039394188566793",
+          "name": "rating",
+          "type": 9
+        },
+        {
+          "id": "3:406091506683901285",
+          "name": "comment",
+          "type": 9
+        },
+        {
+          "id": "4:2780989668252564296",
+          "name": "planId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "5:3809604855529647290",
+          "relationTarget": "Plans"
+        },
+        {
+          "id": "5:8206311918605620636",
+          "name": "userId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "6:7597413820881268621",
+          "relationTarget": "User"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "7:1686984687260612170",
+      "lastPropertyId": "5:2163561365698008536",
+      "name": "Symptoms",
+      "flags": 2,
+      "properties": [
+        {
+          "id": "1:7779203916722705925",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:154226630374681810",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:7919152681218196796",
+          "name": "description",
+          "type": 9
+        },
+        {
+          "id": "4:6773821545529377326",
+          "name": "causes",
+          "type": 30
+        },
+        {
+          "id": "5:2163561365698008536",
+          "name": "complications",
+          "type": 30
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "8:2146476382941573708",
+      "lastPropertyId": "4:6277229786717074658",
+      "name": "User",
+      "flags": 2,
+      "properties": [
+        {
+          "id": "1:3300170380458440103",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5343874657353532536",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:3455692167462282047",
+          "name": "email",
+          "type": 9
+        },
+        {
+          "id": "4:6277229786717074658",
+          "name": "passwordHash",
+          "type": 9
+        }
+      ],
+      "relations": [
+        {
+          "id": "3:7195852163040398707",
+          "name": "review",
+          "targetId": "6:8673298358073854871"
+        },
+        {
+          "id": "4:7162050956083916627",
+          "name": "plan",
+          "targetId": "5:2431819095945767469"
+        }
+      ]
+    }
+  ],
+  "lastEntityId": "8:2146476382941573708",
+  "lastIndexId": "6:7597413820881268621",
+  "lastRelationId": "4:7162050956083916627",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
